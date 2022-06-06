@@ -3,6 +3,13 @@
 import os
 import time
 score = 0
+
+
+#quiz end 
+def quiz_end():
+  print("that is the end of the quiz")
+  print("your score was {}".format(score))
+
 #these lines of code will start the quiz 
 def quiz_stort():
   global score
@@ -27,7 +34,15 @@ def quiz_stort():
 
 #this is the instructions function 
 def show_instructions():
-  print("instructions ")
+  print("this is a ten question te reo maori quiz. ")
+  time.sleep(1)
+  print("you will be asked questions you must answer with the corospondng letter")
+  time.sleep(1)
+  print("you will find out your score after each question. ")
+  time.sleep(1)
+  print("you must get 6 or more questions correct if you want to pass")
+  time.sleep(1)
+  print("anything under six you will fail")
   
   time.sleep(2)
   
@@ -109,13 +124,13 @@ def question_start():
 def question2_start():
   global score
   print("Question 2:")
-  print("question?")
-  print("A: ")
-  print("B: ")
-  print("C: ")
-  print("D: ")
+  print("what is the maori word for apple?")
+  print("A:panana ")
+  print("B:aporo ")
+  print("C:karaka ")
+  print("D:makimaki ")
   question_2 = input().lower()
-  if question_2 == "c" or question_2 == "c":
+  if question_2 == "b" or question_2 == "aporo":
     print("correct") 
     score += 1
     print("your score is {}".format(score))
@@ -144,13 +159,13 @@ def question2_start():
 def question3_start():
   global score
   print("Question 3:")
-  print("question?")
-  print("A: ")
-  print("B: ")
-  print("C: ")
-  print("D: ")
+  print("what is the maori word for dog?")
+  print("A:kanohi ")
+  print("B:mokoweri")
+  print("C:tangata ")
+  print("D:kuri ")
   question_3 = input().lower()
-  if question_3 == "c" or question_3 == "c":
+  if question_3 == "d" or question_3 == "kuri":
     print("correct") 
     score += 1
     print("your score is {}".format(score))
@@ -179,13 +194,13 @@ def question3_start():
 def question4_start():
   global score
   print("Question 4:")
-  print("question?")
-  print("A: ")
-  print("B: ")
-  print("C: ")
-  print("D: ")
+  print("what is the maori word for number 1 ?")
+  print("A:tahi ")
+  print("B:ure ")
+  print("C:i roto ia tatou ")
+  print("D:watea ")
   question_4 = input().lower()
-  if question_4 == "c" or question_4 == "c":
+  if question_4 == "a" or question_4 == "tahi":
     print("correct") 
     score += 1
     print("your score is {}".format(score))
@@ -213,13 +228,13 @@ def question4_start():
 def question5_start():
   global score
   print("Question 5:")
-  print("question?")
-  print("A: ")
-  print("B: ")
-  print("C: ")
-  print("D: ")
+  print("what is the maori word for hello?")
+  print("A:whakapohehe ")
+  print("B:kia ora ")
+  print("C:āe ")
+  print("D:mātauranga ")
   question_5 = input().lower()
-  if question_5 == "c" or question_5 == "c":
+  if question_5 == "b" or question_5 == "kia ora":
     print("correct") 
     score += 1
     print("your score is {}".format(score))
@@ -247,10 +262,10 @@ def question5_start():
 def question6_start():
   global score
   print("Question 6:")
-  print("question? ")
-  print("A: ")
-  print("B: ")
-  print("C: ")
+  print("what is the maori word for nose? ")
+  print("A:ihu ")
+  print("B:upoko ")
+  print("C:makka pakka ")
   print("D: ")
   question_6 = input().lower()
   if question_6 == "c" or question_6 == "c":
@@ -295,7 +310,7 @@ def question7_start():
     print("your score is {}".format(score))
     time.sleep(1)
     os.system('clear')
-    #question_start()
+    question8_start()
   
   elif question_7 == "no":
     print("incorrect")
@@ -303,7 +318,7 @@ def question7_start():
     print("your score is {}".format(score))
     time.sleep(1)
     os.system('clear')
-    #question_start()
+    question8_start()
 
   else:
     print("incorrect")
@@ -311,10 +326,112 @@ def question7_start():
     print("your score is {}".format(score))
     time.sleep(1)
     os.system('clear')
-    #question_start()
-    
+    question8_start()
 
+
+
+
+def question8_start():
+  global score
+  print("Question 8:")
+  print("question?")
+  print("A: ")
+  print("B: ")
+  print("C: ")
+  print("D: ")
+  question_8 = input().lower()
+  if question_8 == "c" or question_8 == "c":
+    print("correct") 
+    score += 1
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    question9_start()
   
+  elif question_8 == "no":
+    print("incorrect")
+    score -= 1
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    question9_start()
+
+  else:
+    print("incorrect")
+    score -= 0
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    question9_start()
+
+def question9_start():
+  global score
+  print("Question 9:")
+  print("question?")
+  print("A: ")
+  print("B: ")
+  print("C: ")
+  print("D: ")
+  question_9 = input().lower()
+  if question_9 == "c" or question_9 == "c":
+    print("correct") 
+    score += 1
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    question10_start()
+  
+  elif question_9 == "no":
+    print("incorrect")
+    score -= 1
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    question10_start()
+
+  else:
+    print("incorrect")
+    score -= 0
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    question10_start()
+
+
+
+
+def question10_start():
+  global score
+  print("Question 10:")
+  print("question?")
+  print("A: ")
+  print("B: ")
+  print("C: ")
+  print("D: ")
+  question_10 = input().lower()
+  if question_10 == "c" or question_10 == "c":
+    print("correct") 
+    score += 1
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    quiz_end()
+  
+  elif question_10 == "no":
+    print("incorrect")
+    score -= 1
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    quiz_end()
+
+  else:
+    print("incorrect")
+    score -= 0
+    print("your score is {}".format(score))
+    time.sleep(1)
+    os.system('clear')
+    quiz_end()
 #these lines of code will greet the user and ask them weather they would like to play
 statement_generator("welcome to the te reo maori quiz", "#")
 
